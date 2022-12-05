@@ -17,6 +17,7 @@ parse("iiisdoso") == {8, 64}
 #include <stdlib.h>
 
 #include <stdio.h>
+#include "printArr.h"
 
 // return a heap-allocated int array
 // its length shall be at least equal to
@@ -53,20 +54,13 @@ int *parse(const char *program)
     return ret;
 }
 
-void printArr(int *arr, size_t size)
-{
-    printf("< ");
-    for (size_t i = 0; i < size; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf(">\n");
-}
-
 int main(int argc, char **argv)
 {
-    int *retarr = parse("iiisdoso");
-    int size = 2;
-    printArr(retarr, size);
+    int osize = 2;
+    int *test = parse("iiisdoso");
+
+    printIntArr(test, osize);
+
+    free(test);
     return 0;
 }
