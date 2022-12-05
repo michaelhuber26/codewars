@@ -8,7 +8,13 @@ void swap(int *xp, int *yp)
     *xp = *yp;
     *yp = temp;
 }
-
+/*
+ *sorts array
+ *@param int* arr: array to sort
+ *@param char size: size of array
+ *
+ *@returns: sorted array
+ */
 int sort(int *arr, char size)
 {
     int i, j;
