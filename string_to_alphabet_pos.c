@@ -9,7 +9,7 @@
 char *alphabet_position(const char *text)
 {
     int num;
-    size_t size = 300;
+    int size = 300;
     char *ret_string = (char *)malloc(size * sizeof(char) + 1);
 
     if (ret_string == NULL)
@@ -18,11 +18,11 @@ char *alphabet_position(const char *text)
         exit(0);
     }
 
-    size_t len = strlen(text);
+    int len = strlen(text);
     char tmp[] = "   ";
     printf("len: %d\n", len);
 
-    for (size_t i = 0; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
         if (text[i] >= 'A' && text[i] <= 'Z')
         {
