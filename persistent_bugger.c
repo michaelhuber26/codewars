@@ -14,7 +14,7 @@ int persistence(int n)
 {
     int ret = 0;
     int cur_digit;
-    int res = 1;
+    int mult_res = 1;
     int digit_cnt = 0;
 
     while ((n / 10) != 0)
@@ -24,12 +24,12 @@ int persistence(int n)
             digit_cnt++;
             cur_digit = n % 10;
             printf("%d\n", cur_digit);
-            res *= cur_digit;
+            mult_res *= cur_digit;
             n /= 10;
         }
-        n = res;
-        printf("res = %d\n", res);
-        res = 1;
+        n = mult_res;
+        printf("res = %d\n", mult_res);
+        mult_res = 1;
         ret++;
     }
     printf("\n");
